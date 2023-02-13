@@ -27,11 +27,11 @@ public class MainClass {
 		 
 		
 		System.out.println("Details are :-");
-		System.out.println(e1.getName());
-		System.out.println(e1.getEmail());
-		System.out.println(e1.getPhone());
-		System.out.println(e1.getEmployeeType());
-		System.out.println(e1.getSalary());
+		System.out.println("Name :- " + e1.getName());
+		System.out.println("Email :- " + e1.getEmail());
+		System.out.println("Phone :- " + e1.getPhone());
+		System.out.println("Employee Type :- " +  e1.getEmployeeType());
+		System.out.println("Salary :- " + e1.getSalary());
 
 	}
 
