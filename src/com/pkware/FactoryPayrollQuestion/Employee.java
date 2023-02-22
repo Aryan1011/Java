@@ -1,30 +1,37 @@
 package com.pkware.FactoryPayrollQuestion;
 
+import java.util.Scanner;
+
 public class Employee {
 	String name;
 	String email;
 	String phone;
 	int salary;
 	int employeeType;
-	public String getName() {
+	
+	public Employee(){
+		
+	}
+	
+	private String getName() {
 		return name;
 	}
-	public void setName(String name) {
+	private void setName(String name) {
 		this.name = name;
 	}
-	public String getEmail() {
+	private String getEmail() {
 		return email;
 	}
-	public void setEmail(String email) {
+	private void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhone() {
+	private String getPhone() {
 		return phone;
 	}
-	public void setPhone(String phone) {
+	private void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public int getSalary() {
+	private int getSalary() {
 		return salary;
 	}
 	public void setSalary(int salary) {
@@ -44,9 +51,28 @@ public class Employee {
 			return "";
 		}
 	}
-	public void setEmployeeType(int employeeType) {
+	private void setEmployeeType(int employeeType) {
 		this.employeeType = employeeType;
 	}
 	
+	public void SetInfo(Scanner sc) {
+		System.out.println("Enter Employee Name");
+		this.setName(sc.nextLine());
+		System.out.println("Enter Employee Email");
+		this.setEmail(sc.nextLine());
+		System.out.println("Enter Employee Phone");
+		this.setPhone(sc.nextLine());
+		System.out.println("Enter Employee Type\n1 for Fixed Salary\n2 for Hourly Based\n3 for Commission Bases\n4 for Commission Based Sales");
+		this.setEmployeeType(sc.nextInt());
+	}
+	
+	public void PrintInfo() {
+		System.out.println("Details are :-");
+		System.out.println("Name :- " + this.getName());
+		System.out.println("Email :- " + this.getEmail());
+		System.out.println("Phone :- " + this.getPhone());
+		System.out.println("Employee Type :- " +  this.getEmployeeType());
+		System.out.println("Salary :- " + this.getSalary());
+	}
 	
 }

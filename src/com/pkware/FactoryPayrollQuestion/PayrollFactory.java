@@ -6,7 +6,6 @@ public class PayrollFactory {
 
 	Payroll getPayroll(String input, Scanner sc) {
 		switch(input) {
-			
 		case "Fixed Salary":
 			return new BaseSalaried(sc);
 		case "Hour Based":
